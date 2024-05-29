@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_about.css">
+    <style>
+        .hobbies{
+            display: flex;
+            margin: 20px 10px;
+            align-items: center;
+            justify-content: center;
+
+        }
+        hobby-box{
+            /* border: 2px solid black; */
+            width: 70%;
+        }
+        hobby-box h2{
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: 300;
+            letter-spacing: 1.5px;
+        }
+        hobby-box ul li{
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body id="page">
+    <container-all>
+    <header></header>
+    <nav class="navbar">
+        <ul class="nav-container">
+            <!-- <li>Vivien Lenard</li> -->
+            <li id="home"><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="web.html">Coding</a></li>
+            <li><a href="photo.html">Photography</a></li>
+            <!-- <li><a href="photo.html">Random Facts</a></li> -->
+            <button id="contact"><a href="contact.html">Contact</a></button>
+        </ul>
+    </nav>
+    <main>
+        <section class="infobox">
+            <article>
+                <h1>about</h1>
+                <p>Hello, my name is Vivien.</p>
+                <p>I am a creative thinker who likes to play around and discover new 
+                    solutions to problems.</p>
+                <p>My background is in science and programming.</p>
+                <p>I studied environmental science for two years and quit my studies to
+                    travel europe. Back then I figured I want to do something more hands-on.</p>
+                <p>Thats when I got interested in programming. After passing the entry test, i started studiyng at 42Heilbronn, a groundbreaking
+                    coding school. I went deep into low-level programming with C and C++. I love the logical thinking and it feels like solving puzzles.</p>
+                <p>However, I feel the call for a little more creativity.</p>
+                <p>Thats why I am focusing on learning webdesign right now.</p>
+            </article>
+        </section>
+        <section>
+            <div class="picture"><img src="img/vivi11.jpg"></div>
+        </section>
+    </main>
+    <hr style="margin-top: 90px">
+    <div class="hobbies">
+        <hobby-box>
+            <article>
+                <h2>hobbies</h2>
+                <ul>
+                    <li>Running in nature</li>
+                    <li>Cooking & Baking</li>
+                    <li>Badminton</li>
+                    <li>Coffee</li>
+                    <li>Coding</li>
+                    <li>Playing table tennis at 42Heilbronn</li>
+                </ul>
+            </article>
+        </hobby-box>
+    </div>
+    <script src="js/coloreffect.js"></script>
+    <script src="js/simple.js"></script>
+</container-all>
+</body>
+</html>
