@@ -118,10 +118,10 @@ icon-row{
   margin-right: 10px;
   color: rgba(128,128,128,0.8)
 } */
-svg{
+/* svg{
   display: block;
   margin: 2px;
-}
+} */
 .inter-slight {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
