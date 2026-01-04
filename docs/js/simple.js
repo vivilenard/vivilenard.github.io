@@ -44,3 +44,25 @@ function typeWriter(elem, i, txt) {
     setTimeout(typeWriter, 50, elem, i, txt);
   }
 }
+
+// Mobile menu toggle functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navContainer = document.querySelector('.nav-container');
+  
+  if (menuToggle && navContainer) {
+    menuToggle.addEventListener('click', function() {
+      menuToggle.classList.toggle('active');
+      navContainer.classList.toggle('active');
+    });
+    
+    // Close menu when clicking on a link
+    const navLinks = navContainer.querySelectorAll('a');
+    navLinks.forEach(function(link) {
+      link.addEventListener('click', function() {
+        menuToggle.classList.remove('active');
+        navContainer.classList.remove('active');
+      });
+    });
+  }
+});

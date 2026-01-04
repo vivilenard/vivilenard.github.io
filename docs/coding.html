@@ -1,133 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About</title>
-    <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="style/style_about.css">
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/style_about.css" />
     <style>
-        h1{
-            font-size: 1.7rem;
-            margin-bottom: 30px;
-            /* letter-spacing: 0.7px; */
+      h1 {
+        font-size: 1.7rem;
+        margin-bottom: 30px;
+        /* letter-spacing: 0.7px; */
+      }
+      h2 {
+        margin-top: 30px;
+        font-weight: 200;
+        font-size: 1.6rem;
+        position: relative;
+      }
+      .coding-page {
+        display: flex;
+        align-items: center;
+        margin: 0 10px;
+        margin-left: 20%;
+        /* border: 2px solid black; */
+      }
+      @media screen and (max-width: 768px) {
+        .coding-page {
+          margin-left: 0;
         }
-        h2{
-            margin-top: 30px;
-            font-weight: 200;
-            font-size: 1.6rem;
-            position: relative;
-        }
-        .coding-page{
-            display: flex;
-            align-items: center;
-            margin: 0 10px;
-            margin-left: 20%;
-            /* border: 2px solid black; */
-        }
-        article{
-            margin-top: 20px;
-            max-width: 500px;
-            /* display: flex;
+      }
+      article {
+        margin-top: 20px;
+        max-width: 500px;
+        /* display: flex;
             flex-direction: column;
             align-items: center; */
-        }
-        article p{
-            line-height: 1;
-            /* line-height: 1.; */
-        }
-        
-        article li, article a{
-            font-size: 0.8rem;
-        }
-        article li{
-            line-height: 1.3;
-            margin-bottom: 7px;
-        }
-        article a{
-            text-decoration: underline;
-        }
-        #github-logo{
-            display: inline-block;
-            position: absolute;
-            top: 8px;
-            left: 110px;
-            /* margin-left: 20px; */
-        }
-        svg:hover{
-            fill: orange;
-        }
-        .coding-page ul{
-            text-align: left;
-        }
-            </style>
-</head>
-<body id="coding">
+      }
+      article p {
+        line-height: 1;
+        /* line-height: 1.; */
+      }
+
+      article li,
+      article a {
+        font-size: 0.8rem;
+      }
+      article li {
+        line-height: 1.3;
+        margin-bottom: 7px;
+      }
+      article a {
+        text-decoration: underline;
+      }
+      #github-logo {
+        display: inline-block;
+        position: absolute;
+        top: 8px;
+        left: 110px;
+        /* margin-left: 20px; */
+      }
+      svg:hover {
+        fill: orange;
+      }
+      .coding-page ul {
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body id="coding">
     <container-all>
-        <header></header>
-        <nav class="navbar">
-            <ul class="nav-container">
-                <li id="home"><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-            <li><a href="coding.html">Coding</a></li>
-            <li><a href="photo.html">Photography</a></li>
-            <!-- <li><a href="contact.html">Random Facts</a></li> -->
-            <button id="contact"><a href="contact.html">Contact</a></button>
+      <header></header>
+      <nav class="navbar">
+        <button class="menu-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-container">
+          <li id="home"><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="coding.html">Coding</a></li>
+          <li><a href="photo.html">Photography</a></li>
+          <!-- <li><a href="contact.html">Random Facts</a></li> -->
+          <button id="contact"><a href="contact.html">Contact</a></button>
         </ul>
-    </nav>
-    <main class="coding-page">
+      </nav>
+      <main class="coding-page">
         <section class="">
-            <h1>coding</h1>
-            <article>
-                <p>My coding journey started in 2022, when I took up my studies at <a href="https://www.42heilbronn.de/en/studies/student-insights/" target="_blank">42Heilbronn</a>.</p>
-                <p>I will give you some project examples:</p>
-            </article>
-            <article>
-                <h2>projects
-                <a id="github-logo" href="https://github.com/vivilenard" target="_blank"><svg fill="#111111DD" height="20" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="20" data-view-component="true">
-                    <path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path>
-                </svg></a>
-                </h2>
-                <ul>
-                    <li><a href="https://github.com/vivilenard/libft" target="_blank" title="Check it out on github!">      Libft</a>:
-                         My own C library, consisting of helpful basic functions.</li>
-                    <li><a href="https://github.com/vivilenard/minishell" target="_blank" title="Check it out on github!">  Minishell</a>:
-                         With my team partner we coded our own shell. We took an example of bash and recoded it quite well.</li>
-                    <li><a href="https://github.com/vivilenard/cub3d" target="_blank" title="Check it out on github!">      Cub3d</a>:
-                         A 3D Game, taking an example of the Wolfenstein game. It was a lot of maths! After that I knew, everything is possible.</li>
-                    <li><a href="https://github.com/vivilenard/Inception" target="_blank" title="Check it out on github!">  Inception</a>:
-                         I learned about Docker and set up three containers (Database, Server, Wordpress) communicating with each other.</li>
-                    <li><a href="https://github.com/vivilenard/webserv" target="_blank" title="Check it out on github!">    Webserv</a>:
-                         Our own Webserver. It took quite some time, but in the end we were proud of what we had archieved!</li>
-                    <li>Transcendence: The last project. Currently in work . . .</li>
-                </ul>
-                <!-- <p>Fun fact: I also learned valid table tennis skills at 42!</p> -->
-            </article>
-            <article>
-                <h2>skills</h2>
-                <ul>
-                    <li>C and C++</li>
-                    <li>Docker</li>
-                    <li>Git</li>
-                    <li>Bash</li>
-                    <li>HTML and CSS</li>
-                    <li>Figma</li>
-                </ul>
-            </article>
-            <article>
-                <h2>interests</h2>
-                <ul>
-                    <li>Javascript</li>
-                    <li>Java and Springboot</li>
-                    <li>Blockchain Technology</li>
-                    <li>Python</li>
-                    <li>Exploring frameworks and improving my CSS skills</li>
-                </ul>
-            </article>
+          <h1>coding</h1>
+          <article>
+            <p>
+              My coding journey started in 2022, when I took up my studies at
+              <a
+                href="https://www.42heilbronn.de/en/studies/student-insights/"
+                target="_blank"
+                >42Heilbronn</a
+              >.
+            </p>
+            <p>I will give you some project examples:</p>
+          </article>
+          <article>
+            <h2>
+              projects
+              <a
+                id="github-logo"
+                href="https://github.com/vivilenard"
+                target="_blank"
+                ><svg
+                  fill="#111111DD"
+                  height="20"
+                  aria-hidden="true"
+                  viewBox="0 0 16 16"
+                  version="1.1"
+                  width="20"
+                  data-view-component="true"
+                >
+                  <path
+                    d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"
+                  ></path></svg
+              ></a>
+            </h2>
+            <ul>
+              <li>
+                <a
+                  href="https://github.com/vivilenard/libft"
+                  target="_blank"
+                  title="Check it out on github!"
+                >
+                  Libft</a
+                >: My own C library, consisting of helpful basic functions.
+              </li>
+              <li>
+                <a
+                  href="https://github.com/vivilenard/minishell"
+                  target="_blank"
+                  title="Check it out on github!"
+                >
+                  Minishell</a
+                >: With my team partner we coded our own shell. We took an
+                example of bash and recoded it quite well.
+              </li>
+              <li>
+                <a
+                  href="https://github.com/vivilenard/cub3d"
+                  target="_blank"
+                  title="Check it out on github!"
+                >
+                  Cub3d</a
+                >: A 3D Game, taking an example of the Wolfenstein game. It was
+                a lot of maths! After that I knew, everything is possible.
+              </li>
+              <li>
+                <a
+                  href="https://github.com/vivilenard/Inception"
+                  target="_blank"
+                  title="Check it out on github!"
+                >
+                  Inception</a
+                >: I learned about Docker and set up three containers (Database,
+                Server, Wordpress) communicating with each other.
+              </li>
+              <li>
+                <a
+                  href="https://github.com/vivilenard/webserv"
+                  target="_blank"
+                  title="Check it out on github!"
+                >
+                  Webserv</a
+                >: Our own Webserver. It took quite some time, but in the end we
+                were proud of what we had archieved!
+              </li>
+              <li>Transcendence: The last project. Currently in work . . .</li>
+            </ul>
+            <!-- <p>Fun fact: I also learned valid table tennis skills at 42!</p> -->
+          </article>
+          <article>
+            <h2>skills</h2>
+            <ul>
+              <li>C and C++</li>
+              <li>Docker</li>
+              <li>Git</li>
+              <li>Bash</li>
+              <li>HTML and CSS</li>
+              <li>Figma</li>
+            </ul>
+          </article>
+          <article>
+            <h2>interests</h2>
+            <ul>
+              <li>Javascript</li>
+              <li>Java and Springboot</li>
+              <li>Blockchain Technology</li>
+              <li>Python</li>
+              <li>Exploring frameworks and improving my CSS skills</li>
+            </ul>
+          </article>
         </section>
-    </main>
-    <script src="js/coloreffect.js"></script>
-    <script src="js/simple.js"></script>
-</container-all>
-</body>
-</html> 
+      </main>
+      <script src="js/coloreffect.js"></script>
+      <script src="js/simple.js"></script>
+    </container-all>
+  </body>
+</html>
