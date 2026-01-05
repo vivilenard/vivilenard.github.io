@@ -1,5 +1,3 @@
-writeSlowly('Hello, my name is Vivien.');
-
 // appear(document.getElementById('introduce'), 0, 5, 40);
 
 
@@ -32,9 +30,11 @@ function appear(elm, i, step, speed){
 
 function writeSlowly(text){
     let elem = document.getElementById('introduce');
-    let i = 0;
-    elem.innerHTML='';
-    typeWriter(elem, i, text);
+    if (elem) {
+        let i = 0;
+        elem.innerHTML='';
+        typeWriter(elem, i, text);
+    }
 }
 
 function typeWriter(elem, i, txt) {
@@ -51,7 +51,9 @@ document.addEventListener('DOMContentLoaded', function() {
   const navContainer = document.querySelector('.nav-container');
   
   if (menuToggle && navContainer) {
-    menuToggle.addEventListener('click', function() {
+    menuToggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
       menuToggle.classList.toggle('active');
       navContainer.classList.toggle('active');
     });
@@ -64,5 +66,11 @@ document.addEventListener('DOMContentLoaded', function() {
         navContainer.classList.remove('active');
       });
     });
+  }
+  
+  // Only run writeSlowly if on about page
+  const introduceElem = document.getElementById('introduce');
+  if (introduceElem) {
+    writeSlowly('Hello, my name is Vivien.');
   }
 });

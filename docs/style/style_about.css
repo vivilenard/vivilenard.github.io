@@ -29,4 +29,39 @@
     width: 100%;
     height: 100%;
   }
+
+  /* Responsive styles for mobile */
+  @media screen and (max-width: 768px){
+    #page main{
+      flex-direction: column;
+      min-height: auto;
+      margin: 0;
+    }
+    
+    #page section{
+      width: 100%;
+      min-height: auto;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+    
+    #page .infobox{
+      margin-right: 0;
+      padding: 0 20px;
+      width: 100%;
+    }
+    
+    #page .picture{
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      aspect-ratio: 3/4;
+    }
+    
+    #page .picture img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
   
